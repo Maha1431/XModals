@@ -34,7 +34,7 @@ function Model()
           setEmail('');
           setPhone('');
           setDob('');
-          setIsOpen(true);
+          setIsOpen(false);
      }
 
     return(
@@ -44,7 +44,7 @@ function Model()
              <button className='button' onClick={openModal}>Open Form</button>
 
              {isOpen && (
-        <div className="modal">
+        <div className="modal" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()} >
             <h2>Fill Details</h2>
             <form onSubmit={handleSubmit} >
