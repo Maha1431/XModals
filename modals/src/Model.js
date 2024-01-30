@@ -6,7 +6,7 @@ function Model()
     const[isOpen, setIsOpen] = useState(false);
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('');
-    const [phonenumber, setPhonenumber] = useState('');
+    const [phone, setPhone] = useState('');
     const [dob, setDob] = useState('')
 
     const openModal =() => {
@@ -32,7 +32,7 @@ function Model()
           }
           setUsername('');
           setEmail('');
-          setPhonenumber('');
+          setPhone('');
           setDob('');
           setIsOpen(true);
      }
@@ -73,12 +73,12 @@ function Model()
               
 
               <div className='form-group'>
-              <label htmlFor="phonenumber">Phone Number:</label>
+              <label htmlFor="phone">Phone Number:</label>
               <input
-                type="text"
-                id="phonenumber"
-                value={phonenumber}
-                onChange={(e) => setPhonenumber(e.target.value)}
+                type="number"
+                id="phone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                 required
               />
               </div>
